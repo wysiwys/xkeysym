@@ -17,7 +17,8 @@ The Minimum Safe Rust Version for this crate is **1.58.1**.
 
 This fork updates the original `xkeysym` crate
 with the latest keysyms from the xorgproto-82 commit,
-in keeping with libxkbcommon v.1.6.0.
+in keeping with libxkbcommon v.1.6.0, which documents the changes
+here: https://github.com/xkbcommon/libxkbcommon/blob/master/NEWS.md
 
 xorgproto keysym headers are distributed directly with this project, 
 but maintain their original license(s).
