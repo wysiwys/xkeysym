@@ -44,7 +44,7 @@ fn main() -> Result<()> {
     tracing_subscriber::fmt::init();
 
     // get the list of files to process
-    let prefix = Path::new("/usr/include/X11/");
+    let prefix = Path::new("x11-headers");
     let files = [
         "keysymdef.h",
         "XF86keysym.h",
