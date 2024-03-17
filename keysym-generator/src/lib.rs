@@ -33,18 +33,17 @@
 use anyhow::Result;
 use regex::Regex;
 use std::{
-    env,
     fmt::Write as _,
     fs,
     io::{prelude::*, BufReader, BufWriter},
     path::Path,
 };
 
-fn main() -> Result<()> {
+pub fn generate(outpath: &str) -> Result<()> {
     tracing_subscriber::fmt::init();
 
     // get the list of files to process
-    let prefix = Path::new("x11-headers");
+    let prefix = Path::new("keysym-generator/x11-headers");
     let files = [
         "keysymdef.h",
         "XF86keysym.h",
@@ -54,7 +53,6 @@ fn main() -> Result<()> {
     ];
 
     // open the output file
-    let outpath = env::args_os().nth(1).expect("output file name");
     let mut outfile = BufWriter::new(fs::File::create(outpath)?);
 
     write!(
