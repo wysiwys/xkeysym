@@ -23,7 +23,7 @@ here: https://github.com/xkbcommon/libxkbcommon/blob/master/NEWS.md
 To maintain consistency across builds,
 xorgproto keysym headers are distributed directly with this project, 
 but maintain their original license(s).
-They are retrieved from: https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/tree/master/include/X11?ref_type=heads
+They are retrieved from: https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/tree/master/include/X11
 
 To regenerate the keysyms from the headers distributed with this crate,
 run `cargo build --features 'generate-keysyms'`
