@@ -6,7 +6,7 @@ converting between keyboard codes and keyboard symbols. This crate does not
 depend on a particular implementation of the X11 protocol and can therefore be
 used in any context where X11 keyboard symbols are needed.
 
-In addition, the compiled `xkeysym` crate contains no unsafe code and is fully compatible with
+In addition, the `xkeysym` crate contains no unsafe code and is fully compatible with
 `no_std` environments.
 
 ## MSRV Policy
@@ -19,9 +19,14 @@ This fork updates the original `xkeysym` crate
 with the latest keysyms from the xorgproto-82 commit,
 in keeping with libxkbcommon v.1.6.0.
 
-
 xorgproto keysym headers are distributed directly with this project, 
 but maintain their original license(s).
+
+To regenerate the keysyms from the headers distributed with this crate,
+run `cargo build --features 'generate-keysyms'`
+or include the `generate-keysyms` feature.
+Please note that this feature will use the standard library.
+
 
 ## License
 

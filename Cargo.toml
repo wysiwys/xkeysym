@@ -18,9 +18,12 @@ members = [
     "keysym-generator",
 ]
 
+[features]
+generate-keysyms = ["keysym-generator"]
+
 [dependencies]
 bytemuck = { version = "1.12.3", default-features = false, features = ["derive"], optional = true }
 serde = { version = "1.0.160", default-features = false, features = ["derive"], optional = true }
 
 [build-dependencies]
-keysym-generator = { path = "keysym-generator" }
+keysym-generator = { path = "keysym-generator", optional = true }
