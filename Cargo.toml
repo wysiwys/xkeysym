@@ -2,7 +2,7 @@
 name = "xkeysym"
 version = "0.2.0"
 edition = "2018"
-authors = ["John Nunley <jtnunley01@gmail.com>"]
+authors = ["John Nunley <jtnunley01@gmail.com>", "wysiwys"]
 description = "A library for working with X11 keysyms"
 repository = "https://github.com/notgull/xkeysym"
 license = "MIT OR Apache-2.0 OR Zlib"
