@@ -6,21 +6,22 @@ converting between keyboard codes and keyboard symbols. This crate does not
 depend on a particular implementation of the X11 protocol and can therefore be
 used in any context where X11 keyboard symbols are needed.
 
-In addition, this crate contains no unsafe code and is fully compatible with
+In addition, the compiled `xkeysym` crate contains no unsafe code and is fully compatible with
 `no_std` environments.
 
 ## MSRV Policy
 
 The Minimum Safe Rust Version for this crate is **1.58.1**.
 
-## Updating Headers
+## Headers
 
-To update the automatically generated keyboard symbols in the
-`automatically_generated.rs` file, install [Just] and run `just`. The process
-creates a Debian Docker container in order to keep the files consistent, so make
-sure Docker is installed first.
+This fork updates the original `xkeysym` crate
+with the latest keysyms from the xorgproto-82 commit,
+in keeping with libxkbcommon v.1.6.0.
 
-[Just]: https://github.com/casey/just
+
+xorgproto keysym headers are distributed directly with this project, 
+but maintain their original license(s).
 
 ## License
 
